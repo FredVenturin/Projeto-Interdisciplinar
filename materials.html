@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoConnect – Meus Materiais</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Ajuste específico para deixar o layout lado a lado */
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <!-- ========== SIDEBAR ========== -->
+    <nav class="sidebar">
+      <ul>
+        <li><a href="materials.html" class="active">Meus Materiais</a></li>
+        <li><a href="messages.html">Mensagens</a></li>
+        <li><a href="history.html">Histórico</a></li>
+        <li><a href="login.html" class="login">Entrar</a></li>
+      </ul>
+    </nav>
+
+    <!-- ========== CONTEÚDO PRINCIPAL ========== -->
+    <div class="main-content">
+      <h1>Fornecedor de Material</h1>
+
+      <!-- ===== TOP STATS ===== -->
+      <div class="top-stats">
+        <div class="stat card">
+          <h3>8</h3>
+          <p>Materiais Ativos</p>
+        </div>
+        <div class="stat card">
+          <h3>12</h3>
+          <p>Negociações</p>
+        </div>
+        <div class="stat card">
+          <h3>R$ 45k</h3>
+          <p>Faturamento</p>
+        </div>
+        <div class="stat card">
+          <h3>+22%</h3>
+          <p>Crescimento</p>
+        </div>
+      </div>
+
+      <!-- ===== LISTA DE MATERIAIS ATIVOS ===== -->
+      <section class="material-list">
+        <h2>Meus Materiais</h2>
+
+        <!-- Card de Material Exemplo -->
+        <div class="material-card card">
+          <div class="details">
+            <h3>Papel e Papelão</h3>
+            <p>Limpo e seco</p>
+            <p><strong>Quantidade:</strong> 50 toneladas</p>
+            <p><strong>Preço:</strong> R$ 800/ton</p>
+          </div>
+          <div class="actions">
+            <button class="btn-edit">Editar</button>
+            <button class="btn-interested">Ver Interessados</button>
+          </div>
+        </div>
+
+        <div class="material-card card">
+          <div class="details">
+            <h3>Plástico PET</h3>
+            <p>Prensado</p>
+            <p><strong>Quantidade:</strong> 25 toneladas</p>
+            <p><strong>Preço:</strong> R$ 1 200/ton</p>
+          </div>
+          <div class="actions">
+            <button class="btn-edit">Editar</button>
+            <button class="btn-interested">Ver Interessados</button>
+          </div>
+        </div>
+
+        <!-- Demais cards seguem mesmo padrão -->
+      </section>
+
+      <!-- ===== FORMULÁRIO DE NOVO MATERIAL ===== -->
+      <section class="form-new-material">
+        <h2>Cadastrar Novo Material</h2>
+        <form>
+          <label for="material-type">Tipo de Material</label>
+          <select id="material-type">
+            <option value="">Selecione o tipo</option>
+            <option>Papel e Papelão</option>
+            <option>Plástico PET</option>
+            <option>Vidro</option>
+            <option>Alumínio</option>
+            <!-- e assim por diante -->
+          </select>
+
+          <label for="material-quantity">Quantidade</label>
+          <input type="number" id="material-quantity" placeholder="50" />
+
+          <label for="material-unit">Unidade</label>
+          <select id="material-unit">
+            <option value="">Unidade</option>
+            <option>toneladas</option>
+            <option>kg</option>
+          </select>
+
+          <label for="material-price">Preço por Unidade</label>
+          <input
+            type="number"
+            id="material-price"
+            placeholder="800"
+            step="0.01"
+          />
+
+          <label for="material-condition">Condição do Material</label>
+          <textarea
+            id="material-condition"
+            class="form-textarea"
+            placeholder="Descreva a condição, limpeza, separação..."
+          ></textarea>
+
+          <button id="btn-add-material" class="btn-submit">Cadastrar Material</button>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      © 2025 EcoConnect. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

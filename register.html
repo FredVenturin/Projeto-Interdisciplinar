@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoConnect – Criar Conta</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ========== HEADER COMUM ========== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">EcoConnect</a>
+      <div class="nav-buttons">
+        <a href="login.html" class="login">Entrar</a>
+        <a href="register.html" class="signup">Cadastrar</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1 style="text-align: center; margin-bottom: 1rem;">EcoConnect</h1>
+    <h2 style="text-align: center; margin-bottom: 2rem; color: var(--gray-600);">
+      Criar Conta
+      <br />
+      <span style="font-size: 1rem; color: var(--gray-500);">
+        Junte-se à nossa rede de reciclagem sustentável
+      </span>
+    </h2>
+
+    <!-- ========== ABAS “Empresa de Reciclagem” e “Fornecedor de Material” ========== -->
+    <div class="tabs">
+      <div class="tab active" data-target="section-empresa">
+        <span class="icon green">🏭</span>
+        Empresa de Reciclagem
+      </div>
+      <div class="tab" data-target="section-fornecedor">
+        <span class="icon blue">📦</span>
+        Fornecedor de Material
+      </div>
+    </div>
+
+    <!-- ========== FORMULÁRIOS ========= -->
+    <form id="form-registro">
+      <!-- --------- FORMULÁRIO: Empresa de Reciclagem --------- -->
+      <div id="section-empresa" class="form-section active">
+        <h3>Cadastro de Empresa de Reciclagem</h3>
+
+        <!-- Informações Básicas -->
+        <div class="form-group">
+          <label for="empresa-name">Nome da Empresa</label>
+          <input type="text" id="empresa-name" placeholder="Digite o nome" />
+        </div>
+        <div class="form-group">
+          <label for="empresa-cnpj">CNPJ</label>
+          <input type="text" id="empresa-cnpj" placeholder="00.000.000/0000-00" />
+        </div>
+        <div class="form-group">
+          <label for="empresa-email">E-mail</label>
+          <input type="email" id="empresa-email" placeholder="contato@empresa.com" />
+        </div>
+        <div class="form-group">
+          <label for="empresa-tel">Telefone</label>
+          <input type="tel" id="empresa-tel" placeholder="(11) 99999-9999" />
+        </div>
+        <div class="form-group">
+          <label for="empresa-senha">Senha</label>
+          <input type="password" id="empresa-senha" />
+        </div>
+        <div class="form-group">
+          <label for="empresa-confirm-senha">Confirmar Senha</label>
+          <input type="password" id="empresa-confirm-senha" />
+        </div>
+
+        <!-- Localização -->
+        <div class="form-group">
+          <label for="empresa-cep">CEP</label>
+          <input type="text" id="empresa-cep" placeholder="00000-000" />
+        </div>
+        <div class="form-group">
+          <label for="empresa-cidade">Cidade</label>
+          <input type="text" id="empresa-cidade" value="São Paulo" readonly />
+        </div>
+        <div class="form-group">
+          <label for="empresa-estado">Estado</label>
+          <select id="empresa-estado">
+            <option value="">Selecione</option>
+            <option>SP</option>
+            <option>RJ</option>
+            <option>MG</option>
+            <!-- outras opções -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="empresa-endereco">Endereço Completo</label>
+          <input type="text" id="empresa-endereco" placeholder="Rua, número, bairro" />
+        </div>
+
+        <!-- Materiais que Recicla -->
+        <div class="form-group">
+          <label>Materiais que Recicla</label>
+          <div class="form-checkboxes">
+            <label><input type="checkbox" value="Papel e Papelão" /> Papel e Papelão</label>
+            <label><input type="checkbox" value="Plástico PET" /> Plástico PET</label>
+            <label><input type="checkbox" value="Plástico PEAD" /> Plástico PEAD</label>
+            <label><input type="checkbox" value="Vidro" /> Vidro</label>
+            <label><input type="checkbox" value="Alumínio" /> Alumínio</label>
+            <label><input type="checkbox" value="Ferro e Aço" /> Ferro e Aço</label>
+            <label><input type="checkbox" value="Cobre" /> Cobre</label>
+            <label><input type="checkbox" value="Eletrônicos" /> Eletrônicos</label>
+            <label><input type="checkbox" value="Óleo de Cozinha" /> Óleo de Cozinha</label>
+            <label><input type="checkbox" value="Pneus" /> Pneus</label>
+          </div>
+        </div>
+
+        <!-- Informações da Empresa -->
+        <div class="form-group">
+          <label for="empresa-capacidade">Capacidade de Processamento (ton/mês)</label>
+          <input type="number" id="empresa-capacidade" placeholder="Ex: 100" />
+        </div>
+        <div class="form-group">
+          <label for="empresa-certificacoes">Certificações</label>
+          <textarea
+            id="empresa-certificacoes"
+            class="form-textarea"
+            placeholder="Liste suas certificações ambientais, ISO, etc."
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="empresa-descricao">Descrição</label>
+          <textarea
+            id="empresa-descricao"
+            class="form-textarea"
+            placeholder="Descreva sua empresa, processos e diferenciais..."
+          ></textarea>
+        </div>
+
+        <input type="submit" class="btn-submit" value="Criar Conta" />
+        <p class="link-login">
+          Já tem uma conta? <a href="index.html">Faça login</a>
+        </p>
+      </div>
+
+      <!-- --------- FORMULÁRIO: Fornecedor de Material --------- -->
+      <div id="section-fornecedor" class="form-section">
+        <h3>Cadastro de Fornecedor de Material</h3>
+
+        <!-- Informações Básicas -->
+        <div class="form-group">
+          <label for="forn-name">Nome / Razão Social</label>
+          <input type="text" id="forn-name" placeholder="Digite o nome" />
+        </div>
+        <div class="form-group">
+          <label for="forn-cnpj">CNPJ</label>
+          <input type="text" id="forn-cnpj" placeholder="00.000.000/0000-00" />
+        </div>
+        <div class="form-group">
+          <label for="forn-email">E-mail</label>
+          <input type="email" id="forn-email" placeholder="contato@empresa.com" />
+        </div>
+        <div class="form-group">
+          <label for="forn-tel">Telefone</label>
+          <input type="tel" id="forn-tel" placeholder="(11) 99999-9999" />
+        </div>
+        <div class="form-group">
+          <label for="forn-senha">Senha</label>
+          <input type="password" id="forn-senha" />
+        </div>
+        <div class="form-group">
+          <label for="forn-confirm-senha">Confirmar Senha</label>
+          <input type="password" id="forn-confirm-senha" />
+        </div>
+
+        <!-- Localização -->
+        <div class="form-group">
+          <label for="forn-cep">CEP</label>
+          <input type="text" id="forn-cep" placeholder="00000-000" />
+        </div>
+        <div class="form-group">
+          <label for="forn-cidade">Cidade</label>
+          <input type="text" id="forn-cidade" value="São Paulo" readonly />
+        </div>
+        <div class="form-group">
+          <label for="forn-estado">Estado</label>
+          <select id="forn-estado">
+            <option value="">Selecione</option>
+            <option>SP</option>
+            <option>RJ</option>
+            <option>MG</option>
+            <!-- outras opções -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="forn-endereco">Endereço Completo</label>
+          <input type="text" id="forn-endereco" placeholder="Rua, número, bairro" />
+        </div>
+
+        <!-- Materiais que Fornece -->
+        <div class="form-group">
+          <label>Materiais que Forneço</label>
+          <div class="form-checkboxes">
+            <label><input type="checkbox" value="Papel e Papelão" /> Papel e Papelão</label>
+            <label><input type="checkbox" value="Plástico PET" /> Plástico PET</label>
+            <label><input type="checkbox" value="Plástico PEAD" /> Plástico PEAD</label>
+            <label><input type="checkbox" value="Vidro" /> Vidro</label>
+            <label><input type="checkbox" value="Alumínio" /> Alumínio</label>
+            <label><input type="checkbox" value="Ferro e Aço" /> Ferro e Aço</label>
+            <label><input type="checkbox" value="Cobre" /> Cobre</label>
+            <label><input type="checkbox" value="Eletrônicos" /> Eletrônicos</label>
+            <label><input type="checkbox" value="Óleo de Cozinha" /> Óleo de Cozinha</label>
+            <label><input type="checkbox" value="Pneus" /> Pneus</label>
+          </div>
+        </div>
+
+        <!-- Informações do Fornecedor -->
+        <div class="form-group">
+          <label for="forn-volume">Volume Médio Mensal (ton)</label>
+          <input type="number" id="forn-volume" placeholder="Ex: 50" />
+        </div>
+        <div class="form-group">
+          <label for="forn-forma-pagto">Forma de Coleta / Pagamento</label>
+          <select id="forn-forma-pagto">
+            <option value="">Selecione</option>
+            <option>À vista</option>
+            <option>30 dias</option>
+            <option>45 dias</option>
+            <option>60 dias</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="forn-descricao">Descrição</label>
+          <textarea
+            id="forn-descricao"
+            class="form-textarea"
+            placeholder="Descreva suas condições, região e detalhes..."
+          ></textarea>
+        </div>
+
+        <input type="submit" class="btn-submit" value="Criar Conta" />
+        <p class="link-login">
+          Já tem uma conta? <a href="index.html">Faça login</a>
+        </p>
+      </div>
+    </form>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      © 2025 EcoConnect. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

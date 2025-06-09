@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoConnect – Histórico de Negociações</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ========== HEADER COMUM ========== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">EcoConnect</a>
+      <div class="nav-buttons">
+        <a href="login.html" class="login">Entrar</a>
+        <a href="register.html" class="signup">Cadastrar</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Histórico de Negociações</h1>
+    <p style="color: var(--gray-600); margin-bottom: 2rem;">
+      Acompanhe todas suas interações e resultados na plataforma
+    </p>
+
+    <!-- ========== CARTÕES DE ESTATÍSTICAS ========== -->
+    <div class="stats-cards">
+      <div class="stat-card card stat">
+        <h3>24</h3>
+        <p>Total de Negociações</p>
+      </div>
+      <div class="stat-card card stat">
+        <h3>85%</h3>
+        <p>Taxa de Sucesso</p>
+      </div>
+      <div class="stat-card card stat">
+        <h3>R$ 156 000</h3>
+        <p>Receita Total</p>
+      </div>
+      <div class="stat-card card stat">
+        <h3>3.2 dias</h3>
+        <p>Duração Média</p>
+      </div>
+    </div>
+
+    <!-- ========== FILTROS ========== -->
+    <div class="card filters">
+      <input
+        type="text"
+        id="filter-company"
+        placeholder="Buscar por empresa..."
+      />
+      <select id="filter-status">
+        <option value="">Status</option>
+        <option>Finalizado</option>
+        <option>Em Andamento</option>
+        <option>Cancelado</option>
+      </select>
+      <select id="filter-period">
+        <option value="">Período</option>
+        <option>Últimos 7 dias</option>
+        <option>Últimos 30 dias</option>
+        <option>Último Ano</option>
+      </select>
+      <button id="btn-search-negotiations" class="btn-primary">
+        Buscar
+      </button>
+    </div>
+
+    <!-- ========== TABELA / LISTAGEM DE NEGOCIAÇÕES ========== -->
+    <div id="negotiations-list">
+      <!-- Card de Exemplo -->
+      <div class="negotiation-card card">
+        <div class="header">
+          <h3>EcoRecicla SP</h3>
+          <span class="badge-completed">Finalizado</span>
+        </div>
+        <div class="info">
+          <span><strong>Material:</strong> Papel e Papelão</span>
+          <span><strong>Quantidade:</strong> 30 ton</span>
+          <span><strong>Valor Total:</strong> R$ 24 000</span>
+          <span><strong>Lucro:</strong> R$ 4 800</span>
+          <span><strong>Duração:</strong> 3 dias</span>
+        </div>
+        <div class="footer">
+          <button class="btn-secondary">Ver Detalhes</button>
+          <button class="btn-secondary">Ver Conversa</button>
+        </div>
+      </div>
+
+      <!-- Demais cards seguem o mesmo padrão -->
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      © 2025 EcoConnect. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

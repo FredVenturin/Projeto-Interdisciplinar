@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoConnect – Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Estilização rápida para centralizar o form de login */
+    .login-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+    }
+    .login-box {
+      background-color: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      padding: 2rem;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--gray-800);
+    }
+    .login-box .form-group {
+      margin-bottom: 1.2rem;
+    }
+    .login-box label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: 500;
+    }
+    .login-box input[type="email"],
+    .login-box input[type="password"] {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid var(--gray-300);
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .login-box input:focus {
+      outline: none;
+      border-color: var(--green-500);
+    }
+    .login-box .btn-login {
+      background-color: var(--green-500);
+      color: var(--white);
+      width: 100%;
+      padding: 0.7rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      border: none;
+      margin-top: 1rem;
+    }
+    .login-box .btn-login:hover {
+      background-color: #2f855a;
+    }
+    .login-box .error {
+      color: #e53e3e;
+      font-size: 0.9rem;
+      margin-top: 0.6rem;
+      text-align: center;
+    }
+    .login-box .link-cad {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--gray-600);
+    }
+    .login-box .link-cad a {
+      color: var(--green-500);
+      text-decoration: none;
+    }
+    .login-box .link-cad a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER IGUAL ÀS DEMAIS PÁGINAS, COM “Entrar” APONTANDO PARA login.html -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">EcoConnect</a>
+      <div class="nav-buttons">
+        <a href="login.html" class="login">Entrar</a>
+        <a href="register.html" class="signup">Cadastrar</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CAIXA CENTRAL DE LOGIN -->
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Login</h2>
+      <form id="form-login">
+        <div class="form-group">
+          <label for="login-email">E-mail</label>
+          <input type="email" id="login-email" placeholder="seu@exemplo.com" required />
+        </div>
+        <div class="form-group">
+          <label for="login-senha">Senha</label>
+          <input type="password" id="login-senha" placeholder="••••••••" required />
+        </div>
+        <div id="login-error" class="error" style="display: none;">
+          <!-- Mensagem de erro aparece aqui via JS -->
+        </div>
+        <button type="submit" class="btn-login">Entrar</button>
+        <p class="link-cad">
+          Ainda não tem conta? <a href="register.html">Cadastre-se</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER OPCIONAL -->
+  <footer class="site-footer">
+    <div class="container">
+      © 2025 EcoConnect. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

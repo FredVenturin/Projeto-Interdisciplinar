@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoConnect – Mensagens</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ====== NAVBAR SIMPLES (VOLTAR PARA O DASHBOARD) ====== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="materials.html" style="text-decoration:none; color: var(--gray-700); font-size: 0.9rem;">
+        ← Voltar ao Dashboard
+      </a>
+      <a href="login.html" class="logo" style="margin-left: 1rem;">EcoConnect</a>
+      <div class="nav-buttons">
+        <!-- Aqui você poderia colocar ícones de configurações, logout, etc. -->
+        <span style="margin-right:1rem;">ER</span> <!-- iniciais do usuário logado -->
+      </div>
+    </div>
+  </header>
+
+  <div class="chat-container">
+    <!-- ===== SIDEBAR DE CONVERSAS ===== -->
+    <div class="chat-sidebar">
+      <input
+        type="text"
+        placeholder="Buscar conversas..."
+        style="margin-bottom: 1rem; padding: 0.6rem; border: 1px solid var(--gray-300); border-radius: 4px;"
+      />
+
+      <div class="conversation-list">
+        <!-- Exemplo de item de conversa -->
+        <div class="conversation-item active">
+          <div class="avatar"></div>
+          <div class="info">
+            <h4>Cooperativa Verde SP</h4>
+            <span>3 novas mensagens</span>
+          </div>
+        </div>
+        <div class="conversation-item">
+          <div class="avatar"></div>
+          <div class="info">
+            <h4>Recicladora do ABC</h4>
+            <span>1 nova mensagem</span>
+          </div>
+        </div>
+        <div class="conversation-item">
+          <div class="avatar"></div>
+          <div class="info">
+            <h4>EcoMateriais Ltda</h4>
+            <span>Última mensagem há 1 dia</span>
+          </div>
+        </div>
+        <!-- Outros itens seguem o mesmo padrão -->
+      </div>
+    </div>
+
+    <!-- ===== ÁREA PRINCIPAL DO CHAT ===== -->
+    <div class="chat-main">
+      <!-- Cabeçalho da conversa ativa -->
+      <div class="chat-header">
+        <h3 id="chat-header-name">Cooperativa Verde SP</h3>
+        <div>
+          <!-- Aqui podem ficar ícones de chamada, vídeo, configurações, etc. -->
+          <span style="cursor:pointer; margin-right:1rem;">⚙️</span>
+          <span style="cursor:pointer;">🔗</span>
+        </div>
+      </div>
+
+      <!-- Mensagens trocadas -->
+      <div class="chat-messages">
+        <!-- Exemplo de mensagem recebida -->
+        <div class="message receiver">
+          <p>Olá! Temos uma nova remessa de papel e papelão disponível.</p>
+          <span class="timestamp">10:20</span>
+        </div>
+        <div class="message receiver">
+          <p>
+            São 50 toneladas de papel limpo e seco, já separado por tipo. Papelão
+            são 30 toneladas prensadas.
+          </p>
+          <span class="timestamp">10:40</span>
+        </div>
+
+        <!-- Exemplo de mensagem enviada -->
+        <div class="message sender">
+          <p>
+            Ótimo! Qual a quantidade disponível e em que condições?
+          </p>
+          <span class="timestamp">10:35</span>
+        </div>
+        <div class="message sender">
+          <p>
+            Perfeito! Podemos agendar a coleta para esta semana. Qual seria o
+            melhor dia?
+          </p>
+          <span class="timestamp">10:45</span>
+        </div>
+      </div>
+
+      <!-- Campo para digitar nova mensagem -->
+      <div class="chat-input-area">
+        <input
+          type="text"
+          id="input-message"
+          placeholder="Digite sua mensagem..."
+        />
+        <button id="btn-send-msg">
+          Enviar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      © 2025 EcoConnect. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
