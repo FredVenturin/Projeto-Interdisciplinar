@@ -1,28 +1,28 @@
-// Espera o DOM carregar completamente
+
 document.addEventListener("DOMContentLoaded", () => {
-  /* ========= register.html: troca de abas ========= */
+ 
   const tabs = document.querySelectorAll(".tab");
   const sections = document.querySelectorAll(".form-section");
 
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
-      // Remover active de todas as abas e seções
+      
       tabs.forEach((t) => t.classList.remove("active"));
       sections.forEach((s) => s.classList.remove("active"));
 
-      // Ativar a aba clicada
+      
       tab.classList.add("active");
       const target = tab.getAttribute("data-target");
       document.getElementById(target).classList.add("active");
     });
   });
 
-  /* ========= history.html: simulação de busca ========= */
+  
   const searchBtn = document.getElementById("btn-search-negotiations");
   if (searchBtn) {
     searchBtn.addEventListener("click", (e) => {
       e.preventDefault();
-      // Para fins de protótipo, apenas alertamos os filtros selecionados
+     
       const inputEmpresa = document.getElementById("filter-company").value;
       const selectStatus = document.getElementById("filter-status").value;
       const selectPeriod = document.getElementById("filter-period").value;
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ========= materials.html: simulação de cadastro de material ========= */
+  
   const addMaterialBtn = document.getElementById("btn-add-material");
   if (addMaterialBtn) {
     addMaterialBtn.addEventListener("click", (e) => {
@@ -47,24 +47,24 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Selecione um tipo de material.");
         return;
       }
-      // Apenas simula um cadastro bem-sucedido
+     
       alert(
         `Material cadastrado:\nTipo: ${tipo}\nQuantidade: ${qtd} ${unidade}\nPreço: R$ ${preco}\nCondição: ${condicao}`
       );
-      // Aqui, em um projeto real, você chamaria uma API para realmente cadastrar
+     
     });
   }
 
-  /* ========= messages.html: seleção de conversa ========= */
+
   const convItems = document.querySelectorAll(".conversation-item");
   convItems.forEach((item) => {
     item.addEventListener("click", () => {
       convItems.forEach((c) => c.classList.remove("active"));
       item.classList.add("active");
-      // Em um protótipo real, aqui você carregaria as mensagens daquela conversa via chamada AJAX
+     
       const chatHeaderName = document.getElementById("chat-header-name");
       chatHeaderName.textContent = item.querySelector("h4").textContent;
-      // Limpa a área de mensagens e adiciona uma mensagem de simulação
+     
       const messagesArea = document.querySelector(".chat-messages");
       messagesArea.innerHTML = "";
       const dummyMsg = document.createElement("div");
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* Enviar mensagem */
+ 
   const sendMsgBtn = document.getElementById("btn-send-msg");
   if (sendMsgBtn) {
     sendMsgBtn.addEventListener("click", () => {
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  /* ====== LOGIN.PHP FRONT-END (USUÁRIOS FIXOS) ====== */
+  
   const loginForm = document.getElementById("form-login");
   if (loginForm) {
     loginForm.addEventListener("submit", (e) => {
@@ -103,13 +103,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const senhaInput = document.getElementById("login-senha").value.trim();
       const errorDiv = document.getElementById("login-error");
 
-      // Usuários padrão:
-      // 1) admin@fortes.com.br / 123456 → redireciona para history.html (por exemplo, Dashboard Admin)
-      // 2) cooperativas@fortes.com.br / 123456 → redireciona para materials.html (Dashboard Fornecedor)
+  
       if (emailInput === "admin@fortes.com.br" && senhaInput === "123456") {
-        // Login de Admin
+        
         errorDiv.style.display = "none";
-        // Redireciona após 300ms para simular loading
+      
         setTimeout(() => {
           window.location.href = "history.html";
         }, 300);
@@ -117,22 +115,20 @@ document.addEventListener("DOMContentLoaded", () => {
         emailInput === "cooperativas@fortes.com.br" &&
         senhaInput === "123456"
       ) {
-        // Login de Cooperativa / Fornecedor
+        
         errorDiv.style.display = "none";
         setTimeout(() => {
           window.location.href = "materials.html";
         }, 300);
       } else {
-        // Credenciais inválidas
+       
         errorDiv.textContent = "E-mail ou senha incorretos.";
         errorDiv.style.display = "block";
       }
     });
   }
 
-  /* ====== RESTANTE DO conteúdo de main.js (abas, filtros, chat, etc.) ====== */
 
-  /* ========= register.html: troca de abas ========= */
   const tabs = document.querySelectorAll(".tab");
   const sections = document.querySelectorAll(".form-section");
 
@@ -146,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* ========= history.html: simulação de busca ========= */
+
   const searchBtn = document.getElementById("btn-search-negotiations");
   if (searchBtn) {
     searchBtn.addEventListener("click", (e) => {
@@ -160,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ========= materials.html: cadastro de material ========= */
+ 
   const addMaterialBtn = document.getElementById("btn-add-material");
   if (addMaterialBtn) {
     addMaterialBtn.addEventListener("click", (e) => {
@@ -181,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ========= messages.html: seleção de conversa ========= */
+
   const convItems = document.querySelectorAll(".conversation-item");
   convItems.forEach((item) => {
     item.addEventListener("click", () => {
@@ -199,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* Enviar mensagem */
+
   const sendMsgBtn = document.getElementById("btn-send-msg");
   if (sendMsgBtn) {
     sendMsgBtn.addEventListener("click", () => {
