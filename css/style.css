@@ -1,4 +1,4 @@
-/* -------------- RESET BÁSICO -------------- */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,12 +7,12 @@
 
 html, body {
   font-family: "Inter", sans-serif;
-  background-color: #f7fafc; /* tom suave de cinza */
-  color: #1a202c;             /* cinza-escuro para texto */
+  background-color: #f7fafc; 
+  color: #1a202c;             
   line-height: 1.6;
 }
 
-/* -------------- VARIÁVEIS DE CORES -------------- */
+
 :root {
   --green-500: #38a169;
   --green-100: #f0fff4;
@@ -29,7 +29,7 @@ html, body {
   --black: #000000;
 }
 
-/* -------------- LAYOUT GERAL -------------- */
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -37,7 +37,7 @@ html, body {
   padding: 2rem 0;
 }
 
-/* Header comum a todas as páginas */
+
 header.site-header {
   background-color: var(--white);
   border-bottom: 1px solid var(--gray-200);
@@ -76,7 +76,7 @@ header .nav-buttons a:hover {
   opacity: 0.9;
 }
 
-/* Botão genérico */
+
 button,
 input[type="submit"] {
   cursor: pointer;
@@ -86,7 +86,7 @@ input[type="submit"] {
   font-weight: 500;
 }
 
-/* Campos de formulário básicos */
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -109,7 +109,7 @@ textarea:focus {
   border-color: var(--green-500);
 }
 
-/* Títulos e subtítulos */
+
 h1, h2, h3, h4 {
   color: var(--gray-800);
 }
@@ -129,7 +129,7 @@ p {
   margin-bottom: 1rem;
 }
 
-/* Botões primários e secundários */
+
 .btn-primary {
   background-color: var(--green-500);
   color: var(--white);
@@ -150,7 +150,7 @@ p {
   background-color: var(--gray-100);
 }
 
-/* Cards usados em vários lugares */
+
 .card {
   background-color: var(--white);
   border: 1px solid var(--gray-200);
@@ -160,7 +160,7 @@ p {
   margin-bottom: 1.5rem;
 }
 
-/* Ícones inline (pode-se usar FontAwesome ou SVGs inline) */
+
 .icon {
   width: 24px;
   height: 24px;
@@ -173,7 +173,7 @@ p {
 .icon.blue { color: #3182ce; }
 .icon.gray { color: var(--gray-400); }
 
-/* Footer simples (caso deseje) */
+
 footer.site-footer {
   background-color: var(--gray-100);
   padding: 1rem 0;
@@ -183,9 +183,7 @@ footer.site-footer {
   margin-top: 3rem;
 }
 
-/* -------------- STYLES ESPECÍFICOS POR PÁGINA -------------- */
 
-/* ========== index.html ========== */
 .hero-section {
   text-align: center;
   padding: 4rem 0;
@@ -205,7 +203,7 @@ footer.site-footer {
   margin: 0 0.5rem;
 }
 
-/* Seção “Como Funciona” */
+
 .how-it-works {
   text-align: center;
   margin-bottom: 3rem;
@@ -234,7 +232,7 @@ footer.site-footer {
   color: var(--gray-600);
 }
 
-/* Seção de métricas */
+
 .metrics {
   display: flex;
   justify-content: space-around;
@@ -256,7 +254,7 @@ footer.site-footer {
   margin-top: 0.3rem;
 }
 
-/* ========== register.html ========== */
+
 .tabs {
   display: flex;
   gap: 1rem;
@@ -280,7 +278,7 @@ footer.site-footer {
   font-weight: 600;
 }
 
-/* Formulário de cadastro */
+
 form#form-registro {
   max-width: 600px;
   margin: 0 auto 2rem;
@@ -336,7 +334,7 @@ form#form-registro {
   text-decoration: underline;
 }
 
-/* ========== history.html ========== */
+
 .filters {
   display: flex;
   gap: 1rem;
@@ -398,7 +396,7 @@ form#form-registro {
   border-radius: 4px;
 }
 
-/* Estado “Finalizado” */
+
 .badge-completed {
   background-color: #9ae6b4;
   color: #22543d;
@@ -408,7 +406,7 @@ form#form-registro {
   font-weight: 600;
 }
 
-/* ========== materials.html ========== */
+
 .sidebar {
   width: 220px;
   background-color: var(--white);
@@ -492,7 +490,7 @@ form#form-registro {
   opacity: 0.9;
 }
 
-/* Formulário de cadastro de material */
+
 .form-new-material {
   background-color: var(--white);
   border: 1px solid var(--gray-200);
@@ -510,7 +508,7 @@ form#form-registro {
   color: var(--white);
 }
 
-/* ========== messages.html ========== */
+
 .chat-container {
   display: flex;
   height: calc(100vh - 80px);
